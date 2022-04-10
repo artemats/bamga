@@ -1,0 +1,52 @@
+.hero{
+	position: relative;
+	padding: 171px 0 100px;
+		&-title{
+			padding-left: 80px;
+			max-width: 790px;
+		}
+		&-action{
+			padding-left: 80px;
+			margin-top: 46px;
+		}
+		&-description{
+			padding-top: 9px;
+			max-width: 335px;
+		}
+		&-carousel{
+			margin: 127px auto 0;
+			&-item{
+				width: 270px;
+				height: 360px;
+				margin: 0 15px;
+				transition: all var(--scale-duration) var(--hover-ease);
+					img{
+						@include imageCover(center);
+					}
+					&.is-active{
+						transform: scale(1);
+					}
+					&.is-prev,
+					&.is-next,
+					&.is-scaled{
+						width: 111px;
+						height: 148px;
+					}
+					&.is-next + .hero-carousel-item + .hero-carousel-item,
+					&.is-next + .hero-carousel-item + .hero-carousel-item + .hero-carousel-item + .hero-carousel-item{
+						width: 111px;
+						height: 148px;
+					}
+			}
+			.splide__list{
+				align-items: center;
+			}
+		}
+		.section{
+			&-bg{
+				img{
+					width: 100%;
+				}
+			}
+		}
+}

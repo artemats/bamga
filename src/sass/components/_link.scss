@@ -1,0 +1,23 @@
+.link{
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: .02em;
+	font-family: var(--font-base-semibold);
+	font-size: 14px;
+	line-height: 1.5em;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	color: var(--color-primary);
+	transition: color var(--hover-duration) var(--hover-ease);
+		&-default{
+			text-transform: none;
+			font-family: var(--font-base-regular);
+			color: var(--color-white);
+		}
+		@include hover($md){
+			&:hover{
+				color: var(--color-error);
+			}
+		}
+}

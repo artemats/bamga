@@ -1,0 +1,48 @@
+.news{
+	padding: 137px 0;
+		&-box{
+			position: relative;
+			margin-top: 120px;
+				&-thumb{
+					height: 488px;
+					overflow: hidden;
+					margin-bottom: 23px;
+					display: block;
+						img{
+							@include imageCover(center);
+						}
+				}
+				&-tags{
+					display: flex;
+					align-items: center;
+					flex-wrap: wrap;
+				}
+				&-title{
+					color: var(--color-black);
+					margin: 19px 0 12px;
+				}
+				&-description{
+					position: relative;
+					padding-right: 100px;
+					margin-top: 20px;
+						.btn{
+								&-dot{
+									position: absolute;
+									top: 0;
+									right: 0;
+								}
+						}
+				}
+		}
+		.section{
+				&-name{
+					top: 62px;
+				}
+				&-title{
+					padding-left: 80px;
+				}
+				&-bg{
+					text-align: right;
+				}
+		}
+}

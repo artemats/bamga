@@ -1,0 +1,56 @@
+.h-1{
+  @extend h1;
+}
+
+.h-2{
+  @extend h2;
+}
+
+.h-3{
+  @extend h3;
+}
+
+.h-4{
+  @extend h4;
+}
+
+.h-5{
+  @extend h5;
+}
+
+.h-6 {
+  @extend h6;
+}
+
+.paragraph{
+  line-height: inherit;
+  font-size: inherit;
+    &-md{
+      font-size: 16px;
+      line-height: 1.625em;
+    }
+    &-lg{
+      font-size: 18px;
+    }
+    &-medium{
+      font-family: var(--font-base-mediumn);
+      color: var(--color-black);
+    }
+    &-semibold{
+      font-family: var(--font-base-semibold);
+      color: var(--color-black);
+    }
+    &-label{
+      text-transform: uppercase;
+      font-family: var(--font-base-semibold);
+    }
+    &:not(:last-child){
+      margin-bottom: 12px;
+    }
+}
+
+.color{
+    &-red{
+      color: var(--color-error);
+    }
+}

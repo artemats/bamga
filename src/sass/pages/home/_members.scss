@@ -1,0 +1,42 @@
+.members{
+	margin-top: 70px;
+	min-height: 200vh;
+	height: 100vh;
+	overflow: visible;
+		.section{
+				&-name{
+					top: 34px;
+				}
+				&-thumb{
+					height: 528px;
+					margin-left: 80px;
+					position: relative;
+					z-index: 2;
+					//position: sticky;
+					//top: 0;
+						img{
+							@include imageCover(center);
+						}
+				}
+				&-title{
+					margin-bottom: 33px;
+				}
+				&-description{
+					margin: 15px 0 46px;
+				}
+				&-content{
+					padding-top: 117px;
+					max-width: 530px;
+				}
+				&-bg{
+					img{
+						width: 100%;
+					}
+				}
+		}
+		.container,
+		.row,
+		[class*=col-]{
+			height: 100%;
+		}
+}

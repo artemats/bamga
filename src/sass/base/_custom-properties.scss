@@ -1,0 +1,23 @@
+:root {
+  --color-black:                          #0F0F0F;
+  --color-black-100:                      #3D3F43;
+  --color-white:                          #FFFFFF;
+  --color-error:                          #E60A14;
+  --color-primary:                        #094E95;
+  --color-primary-light:                  #9CBDF0;
+  --color-gray:                           #70797A;
+  --color-gray-100:                       #828282;
+  --font-base-regular:                    'Poppins-Regular';
+  --font-base-mediumn:                    'Poppins-Medium';
+  --font-base-semibold:                   'Poppins-SemiBold';
+  --font-title-bold:                      'Jones-Bold';
+  --hover-duration:                       .2s;
+  --scale-duration:                       1s;
+  --hover-ease:                           ease;
+}
+
+$lg:                                      1330;
+$xl:                                      1199;
+$md:                                      991;
+$sm:                                      767;
+$xs:                                      575;

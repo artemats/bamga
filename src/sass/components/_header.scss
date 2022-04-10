@@ -1,0 +1,18 @@
+.header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 16px 0;
+	z-index: 3;
+		&-logo{
+			width: 162px;
+				img{
+					width: 100%;
+					height: auto;
+				}
+		}
+		&-nav{
+			padding-top: 19px;
+		}
+}

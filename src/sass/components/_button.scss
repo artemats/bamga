@@ -1,0 +1,90 @@
+.btn{
+	display: inline-flex;
+	align-items: center;
+	white-space: nowrap;
+	padding: 8px 0;
+	border: none;
+	background-color: transparent;
+	font-size: 16px;
+	line-height: 1.5em;
+	font-family: var(--font-base-mediumn);
+	position: relative;
+	transition: color var(--hover-duration) var(--hover-ease);
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background-color: var(--color-black);
+			transition: all var(--hover-duration) var(--hover-ease);
+			transition-delay: .2s;
+			pointer-events: none;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -10px;
+			right: -10px;
+			height: 0;
+			background-color: var(--color-black);
+			transition: height var(--hover-duration) var(--hover-ease);
+			pointer-events: none;
+		}
+		&-title{
+			display: inline-block;
+			position: relative;
+			z-index: 1;
+		}
+		&-icon{
+			display: inline-flex;
+			align-items: center;
+			margin-left: 28px;
+			position: relative;
+			z-index: 1;
+		}
+		@include hover($md){
+			&:hover{
+				color: var(--color-white);
+				transition-delay: .2s;
+					&:before{
+						left: -10px;
+						right: -10px;
+						transition-delay: 0s;
+					}
+					&:after{
+						transition-delay: .2s;
+						height: 100%;
+					}
+			}
+		}
+		/*
+		Types
+		 */
+		&-dot{
+			width: 52px;
+			height: 52px;
+			min-width: 52px;
+			border: 1px var(--color-error) solid;
+			border-radius: 50%;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: transform var(--hover-duration) var(--hover-ease);
+				&:before,
+				&:after{
+					display: none;
+				}
+				.svg{
+					color: var(--color-error);
+				}
+				@include hover($md) {
+					&:hover {
+						transform: rotate(45deg);
+					}
+				}
+		}
+}
