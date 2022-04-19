@@ -7,27 +7,27 @@ export const generalScene = () => {
 	/*
 	Images parallax
 	 */
-	const boxes = document.querySelectorAll('.parallaxOnScroll');
-	for (let i = 0; i < boxes.length; i++) {
-		new ScrollMagic.Scene({
-			triggerElement: boxes[i],
-			triggerHook: 1,
-		})
-			.setTween(
-				Tween.fromTo(boxes[i].querySelector('img'),
-					{
-						scale: 2,
-						y: -100,
-					},
-					{
-						scale: 1,
-						y: 0,
-						duration: transition.scale.duration,
-						ease: transition.scale.ease,
-					})
-			)
-			.addTo(controller);
-	}
+	// const boxes = document.querySelectorAll('.parallaxOnScroll');
+	// for (let i = 0; i < boxes.length; i++) {
+	// 	new ScrollMagic.Scene({
+	// 		triggerElement: boxes[i],
+	// 		triggerHook: 1,
+	// 	})
+	// 		.setTween(
+	// 			Tween.fromTo(boxes[i].querySelector('img'),
+	// 				{
+	// 					scale: 2,
+	// 					y: -100,
+	// 				},
+	// 				{
+	// 					scale: 1,
+	// 					y: 0,
+	// 					duration: transition.scale.duration,
+	// 					ease: transition.scale.ease,
+	// 				})
+	// 		)
+	// 		.addTo(controller);
+	// }
 
 	/*
 	Horizontal moving
