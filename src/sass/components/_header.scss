@@ -1,14 +1,16 @@
 .header{
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	padding: 16px 0;
 	z-index: 3;
+	transition: background-color var(--hover-duration) var(--hover-ease), padding var(--hover-duration) var(--hover-ease), box-shadow var(--hover-duration) var(--hover-ease);
 		&-logo{
 			width: 162px;
 			position: relative;
 			z-index: 1;
+			transition: width var(--hover-duration) var(--hover-ease);
 				img{
 					width: 100%;
 					height: auto;
@@ -20,6 +22,7 @@
 		}
 		&-nav{
 			padding-top: 19px;
+			transition: padding var(--hover-duration) var(--hover-ease);
 				@include d($lg){
 					display: flex;
 					justify-content: flex-end;
@@ -27,6 +30,22 @@
 				}
 				@include d($xxs){
 					padding-top: 17px;
+				}
+		}
+		&.is-fixed{
+			background-color: var(--color-white);
+			padding: 5px 0;
+			box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.3);
+				.header{
+						&-logo{
+							width: 120px;
+						}
+						&-nav{
+							padding-top: 11px;
+								@include d($md){
+									padding-top: 16px;
+								}
+						}
 				}
 		}
 }

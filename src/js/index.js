@@ -11,6 +11,7 @@ import {setFullBannerPosition} from "./common/general/setFullBannerPosition";
 import {articlesCarousel} from "./common/carousels/articlesCarousel";
 import {tabsCarousel} from "./common/carousels/tabsCarousel";
 import {initTooltip} from "./common/general/initTooltip";
+import {changeHeaderOnScroll} from "./common/general/changeHeaderOnScroll";
 
 /*
 Require svg icons to stripe
@@ -34,6 +35,7 @@ setNavDropdowns();
 toggleMainNav();
 setFullBannerPosition();
 initTooltip();
+changeHeaderOnScroll();
 
 /*
 Carousels

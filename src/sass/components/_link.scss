@@ -10,10 +10,25 @@
 	background-color: transparent;
 	color: var(--color-primary);
 	transition: color var(--hover-duration) var(--hover-ease);
+	position: relative;
 		&-default{
 			text-transform: none;
 			font-family: var(--font-base-regular);
 			color: var(--color-white);
+		}
+		&.is-active{
+			&:after{
+				content: '';
+				position: absolute;
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background-color: var(--color-error);
+				left: 50%;
+				margin-left: -3px;
+				top: -10px;
+				pointer-events: none;
+			}
 		}
 		@include hover($md){
 			&:hover{
