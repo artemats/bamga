@@ -7,6 +7,9 @@
 					display: flex;
 					white-space: nowrap;
 				}
+				@include d($xs){
+					padding-top: 90px;
+				}
 		}
 		&-item{
 			width: 394px;
@@ -32,17 +35,47 @@
 						img{
 							@include imageContain(center);
 						}
+						@include d($xs){
+							width: 100px;
+							height: 80px;
+						}
+				}
+				@include d($md){
+					width: 320px;
+					height: 320px;
+					min-width: 320px;
+				}
+				@include d($xs){
+					width: 200px;
+					height: 200px;
+					min-width: 200px;
+					margin: 0 -10px;
 				}
 		}
 		.section{
 			&-title{
 				padding-left: 80px;
+					@include d($xl){
+						padding-left: 60px;
+					}
+					@include d($sm){
+						padding-left: 40px;
+					}
+					@include d($xs){
+						padding-left: 0;
+					}
 			}
 			&-name{
 				top: 106px;
+					@include d($md){
+						top: 60px;
+					}
 			}
 			&-bg{
 				text-align: center;
 			}
+		}
+		@include d($md){
+			padding: 100px 0;
 		}
 }

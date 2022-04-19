@@ -8,6 +8,15 @@
 						padding-bottom: 70px;
 					}
 				}
+				@include d($xl){
+					padding-left: 60px;
+				}
+				@include d($sm){
+					padding-left: 40px;
+				}
+				@include d($xs){
+					padding-left: 0;
+				}
 		}
 		&-title{
 			font-size: 26px;
@@ -42,6 +51,20 @@
 					padding-left: 80px;
 					margin-top: 85px;
 					margin-bottom: 154px;
+						@include d($xl){
+							padding-left: 60px;
+						}
+						@include d($md){
+							margin-bottom: 50px;
+						}
+						@include d($sm){
+							padding-left: 40px;
+							margin-top: 60px;
+						}
+						@include d($xs){
+							margin-top: 30px;
+							padding-left: 0;
+						}
 				}
 				&-name{
 					top: 27px;
@@ -49,6 +72,9 @@
 				&-thumb{
 					position: sticky;
 					top: 0;
+						@include d($md){
+							display: none;
+						}
 				}
 				&-bg{
 					img{
@@ -59,5 +85,43 @@
 		}
 		.social{
 			padding-top: 8px;
+				&-link{
+					@include d($xl){
+						&:not(:last-child){
+							margin-right: 0;
+							margin-bottom: 10px;
+						}
+					}
+					@include d($md){
+						&:not(:last-child){
+							margin-right: 15px;
+							margin-bottom: 0;
+						}
+					}
+					@include d($xxs){
+						&:not(:last-child){
+							margin-right: 0;
+							margin-bottom: 10px;
+						}
+					}
+				}
+				@include d($xl){
+					flex-direction: column;
+					align-items: flex-start;
+				}
+				@include d($md){
+					flex-direction: row;
+					align-items: center;
+				}
+				@include d($xxs){
+					flex-direction: column;
+					align-items: flex-start;
+				}
+		}
+		@include d($xl){
+			padding: 22px 0 100px;
+		}
+		@include d($md){
+			padding: 22px 0 50px;
 		}
 }

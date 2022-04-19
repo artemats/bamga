@@ -1,0 +1,54 @@
+.article{
+	&-open{
+		padding-top: 28px;
+		padding-bottom: 100px;
+			&-hero{
+				margin-bottom: 112px;
+					@include d($md){
+						margin-bottom: 50px;
+					}
+			}
+			&-more{
+				padding: 45px 0 150px;
+					.section{
+							&-name{
+								top: -14px;
+							}
+					}
+					@include d($xl){
+						padding: 45px 0 100px;
+					}
+					@include d($md){
+						padding: 45px 0 80px;
+					}
+			}
+			.section{
+					&-banner{
+						margin-top: 0;
+						height: auto;
+						margin-bottom: 30px;
+							@include m($md + 1){
+								height: 410px;
+								position: sticky;
+								top: 0;
+								margin-right: 32px;
+							}
+					}
+			}
+			.paragraph{
+					&-title{
+						margin-bottom: 30px;
+							@include m($md + 1){
+								max-width: 512px;
+							}
+					}
+			}
+			@include d($md){
+				padding-bottom: 80px;
+			}
+			@include d($sm){
+				padding-top: 0;
+				padding-bottom: 40px;
+			}
+	}
+}

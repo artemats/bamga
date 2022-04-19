@@ -1,0 +1,11 @@
+.projects{
+		&-inner{
+			padding-bottom: 150px;
+				.news-box{
+					margin-top: 65px;
+				}
+				@include d($sm){
+					margin-top: -50px;
+				}
+		}
+}

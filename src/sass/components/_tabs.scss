@@ -1,0 +1,62 @@
+.tabs{
+		&-row{
+			@include d($sm){
+				padding-left: 15px;
+			}
+		}
+		&-btn{
+			display: inline-block;
+			max-width: 245px;
+			width: 100%;
+			border: 1px var(--color-primary-light) solid;
+			background-color: transparent;
+			font-family: var(--font-base-mediumn);
+			font-size: 14px;
+			color: var(--color-primary);
+			height: 56px;
+			line-height: 56px;
+			padding: 0 40px;
+			transition: background-color var(--hover-duration) var(--hover-ease), color var(--hover-duration) var(--hover-ease);
+			margin-top: 30px;
+				&-title{
+					display: block;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+				&.is-active{
+					color: var(--color-white);
+					background-color: var(--color-primary-light);
+				}
+				@include hover($md){
+					&:hover{
+						color: var(--color-white);
+						background-color: var(--color-primary-light);
+					}
+				}
+				@include d($sm){
+					font-size: 12px;
+					padding: 0 30px;
+					max-width: 220px;
+					height: 48px;
+					line-height: 48px;
+				}
+		}
+		&-content{
+				&-item{
+					display: none;
+						&.is-active{
+							display: block;
+						}
+				}
+		}
+		.splide__track{
+			@include d($sm){
+				padding-left: 15px !important;
+			}
+		}
+		@include d($sm){
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+}

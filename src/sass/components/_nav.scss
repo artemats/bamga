@@ -3,6 +3,10 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
+				@include d($md){
+					flex-direction: column;
+					align-items: flex-start;
+				}
 		}
 		li{
 			position: relative;
@@ -27,6 +31,11 @@
 							text-transform: none;
 							font-family: var(--font-base-mediumn);
 						}
+						@include d($md){
+							position: relative;
+							padding: 10px;
+							box-shadow: none;
+						}
 				}
 		}
 		& > ul {
@@ -45,12 +54,45 @@
 					&.dropdown{
 						& > a{
 							padding-right: 16px;
+							pointer-events: none;
 						}
+					}
+					@include m($md + 1){
+						opacity: 1 !important;
+						transform: none !important;
+					}
+					@include d($xl){
+						margin: 0 18px;
+					}
+					@include d($md){
+						margin: 0;
+						padding-bottom: 20px;
+						opacity: 0;
 					}
 			}
 		}
 		.link{
 		
+		}
+		@include m($md + 1){
+			display: block !important;
+			opacity: 1 !important;
+		}
+		@include d($md){
+			display: none;
+			position: fixed;
+			opacity: 0;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--color-white);
+			padding: 100px 40px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		@include d($sm){
+			padding: 100px 15px;
 		}
 }
 

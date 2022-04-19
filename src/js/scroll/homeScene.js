@@ -8,7 +8,7 @@ export const homeScene = () => {
 	Scale banner
 	 */
 	const scaleBanner = document.querySelector('.scaleOnScroll');
-	if (!!scaleBanner) {
+	if (!!scaleBanner && window.innerWidth >= 992) {
 		const { left } = scaleBanner.getBoundingClientRect();
 		new ScrollMagic.Scene({
 			triggerElement: document.querySelector('.members'),
@@ -77,10 +77,10 @@ export const homeScene = () => {
 	Switch fixed social
 	 */
 	const fixedSocial = document.querySelector('.social-fixed');
-	if (!!fixedSocial && !!document.querySelector('.members')) {
+	if (!!fixedSocial && !!document.querySelector('.hideFixedSocial')) {
 		new ScrollMagic.Scene({
-			triggerElement: document.querySelector('.members'),
-			triggerHook: 0,
+			triggerElement: document.querySelector('.hideFixedSocial'),
+			triggerHook: 0.5,
 		})
 			.setTween(Tween.to(fixedSocial, {
 				opacity: 0,

@@ -1,0 +1,37 @@
+.contact-project{
+		.contact{
+				&-body{
+						&-item{
+							&:not(:last-child){
+								padding-bottom: 30px;
+							}
+						}
+						@include d($md){
+							padding-left: 0;
+						}
+				}
+		}
+		.section{
+				&-title{
+					margin-bottom: 77px;
+						@include d($md){
+							padding-left: 0;
+						}
+				}
+		}
+		.hr{
+			margin: 34px 0 42px;
+		}
+		[class*=h-]{
+			margin-bottom: 10px;
+		}
+		.group-buttons{
+			margin-top: 200px;
+				@include d($md){
+					margin-top: 150px;
+				}
+				@include d($sm){
+					margin-top: 100px;
+				}
+		}
+}

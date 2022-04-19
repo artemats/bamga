@@ -1,0 +1,90 @@
+.person{
+	display: flex;
+	width: 100%;
+	border-bottom: 1px var(--color-black) solid;
+		&:nth-child(1){
+			border-top: 1px var(--color-black) solid;
+		}
+		&-thumb{
+			width: 264px;
+			min-width: 264px;
+			height: 328px;
+				img{
+					@include imageCover(center);
+				}
+				@include d($sm){
+					width: 200px;
+					min-width: 200px;
+					height: 260px;
+				}
+				@include d($xs){
+					width: 100%;
+					height: auto;
+				}
+		}
+		&-description{
+			padding: 41px 10px 30px 104px;
+				&-title{
+				
+				}
+				@include d($lg){
+					padding: 41px 10px 20px 64px;
+				}
+				@include d($md){
+					padding: 41px 10px 10px 34px;
+				}
+				@include d($sm){
+					padding: 25px 10px 10px 30px;
+				}
+				@include d($xs){
+					padding: 25px 0 20px 15px;
+				}
+		}
+		&-detail{
+			padding-top: 36px;
+			max-width: 540px;
+				&-row{
+					display: flex;
+						&:not(:last-child){
+							margin-bottom: 25px;
+								@include d($md){
+									margin-bottom: 15px;
+								}
+								@include d($sm){
+									margin-bottom: 10px;
+								}
+						}
+						@include d($sm){
+							flex-direction: column;
+						}
+				}
+				&-item{
+					flex: 1;
+						&:nth-child(1){
+							max-width: 143px;
+								@include d($sm){
+									max-width: 100%;
+								}
+						}
+				}
+				&-label{
+					color: var(--color-primary-light);
+					font-family: var(--font-base-mediumn);
+				}
+				&-value{
+					@extend .paragraph-lg;
+						@include d($md){
+							font-size: 16px;
+						}
+						@include d($sm){
+							font-size: 14px;
+						}
+				}
+				@include d($sm){
+					padding-top: 15px;
+				}
+		}
+		@include d($xs){
+			flex-direction: column;
+		}
+}

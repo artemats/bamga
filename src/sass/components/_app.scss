@@ -11,9 +11,16 @@ body{
 }
 
 .container{
-	max-width: 1342px;
+	max-width: 1430px;
 	position: relative;
 	z-index: 1;
+	padding: 0 60px;
+		@include d($xl){
+			padding: 0 40px;
+		}
+		@include d($sm){
+			padding: 0 15px;
+		}
 }
 
 .tag{
@@ -22,6 +29,9 @@ body{
 	letter-spacing: .02em;
 	color: var(--color-primary-light);
 	font-family: var(--font-title-bold);
+		@include d($md){
+			font-size: 12px;
+		}
 }
 
 .hr{
@@ -31,6 +41,128 @@ body{
 	background-color: var(--color-black);
 }
 
+.breadcrumbs{
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-bottom: 60px;
+		&-item{
+			color: var(--color-gray-200);
+			font-family: var(--font-base-mediumn);
+			position: relative;
+			display: inline-flex;
+			align-items: center;
+			line-height: 1em;
+			white-space: nowrap;
+				&-icon{
+					width: 14px;
+					height: 14px;
+					margin-left: 3px;
+				}
+				&:not(:last-child){
+					margin-right: 2px;
+				}
+				&:last-child{
+					color: var(--color-error);
+					pointer-events: none;
+					margin-right: 10px;
+						.breadcrumbs-item-icon{
+							display: none;
+						}
+				}
+				&[href=""]{
+					pointer-events: none;
+				}
+		}
+		@include d($lg){
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+		}
+		@include d($sm){
+			margin-right: -15px;
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+}
+
 .parallaxOnScroll{
 	overflow: hidden;
+}
+
+.hideOnLoad{
+	transition: opacity var(--show-duration) var(--hover-ease), transform var(--show-duration) var(--hover-ease);
+	&.hidden{
+		opacity: 0;
+			&.top{
+				transform: translateY(-50px);
+			}
+			&.bottom{
+				transform: translateY(50px);
+			}
+	}
+}
+
+.document{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-top: 93px;
+	padding: 0 15px;
+		&-icon{
+			height: 56px;
+			margin-bottom: 24px;
+		}
+		&-title{
+			margin: 0 auto;
+			max-width: 184px;
+			word-break: break-word;
+		}
+		@include d($md){
+			margin-top: 70px;
+		}
+}
+
+.group{
+	&-buttons{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+			@include d($sm){
+				flex-direction: column;
+			}
+			.btn{
+				&:not(:last-child){
+					@include d($sm){
+						margin-bottom: 20px;
+					}
+				}
+			}
+	}
+}
+
+.list{
+	li{
+		@extend .paragraph;
+		color: var(--color-gray);
+		position: relative;
+		padding-left: 20px;
+			&:before{
+				content: '';
+				position: absolute;
+				top: 8px;
+				left: 0;
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background-color: var(--color-error);
+			}
+			&:not(:last-child){
+				margin-bottom: 18px;
+					@include d($xl){
+						margin-bottom: 15px;
+					}
+			}
+	}
 }

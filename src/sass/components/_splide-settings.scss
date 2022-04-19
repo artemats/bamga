@@ -1,0 +1,27 @@
+.splide{
+		&__pagination{
+			margin-top: 80px;
+				&__page{
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					padding: 0;
+					border: none;
+					background-color: var(--color-gray-300);
+					transition: background-color var(--hover-duration) var(--hover-ease), transform var(--hover-duration) var(--hover-ease);
+						&.is-active{
+							background-color: var(--color-error);
+							transform: scale(2);
+						}
+				}
+				li{
+					margin: 0 8px;
+				}
+				@include d($md){
+					margin-top: 50px;
+				}
+				@include d($sm){
+					margin-top: 20px;
+				}
+		}
+}

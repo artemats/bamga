@@ -2,21 +2,13 @@
 	background-color: var(--color-black);
 	color: var(--color-white);
 	overflow: hidden;
+	position: relative;
 		&-panel{
 			display: flex;
 			max-width: 1440px;
 			width: 100%;
 			margin: 0 auto;
 			position: relative;
-				&:before{
-					content: '';
-					position: absolute;
-					bottom: 0;
-					left: -50vw;
-					right: -50vw;
-					height: 1px;
-					background-color: var(--color-black-100);
-				}
 				&-item{
 					flex: 1;
 					height: 192px;
@@ -25,15 +17,40 @@
 					align-items: center;
 					justify-content: center;
 					border-right: 1px var(--color-black-100) solid;
-						//&:nth-child(1){
-						//	border-left: 1px var(--color-black-100) solid;
-						//}
+					position: relative;
+						&:before{
+							content: '';
+							position: absolute;
+							bottom: 0;
+							left: -50vw;
+							right: -50vw;
+							height: 1px;
+							background-color: var(--color-black-100);
+						}
 						&:last-child{
 							border-right: none;
 						}
 						&.__20{
 							max-width: 20%;
+								@include d($sm){
+									flex: none;
+									max-width: 100%;
+									width: 33.33%;
+								}
 						}
+						@include d($md){
+							height: 160px;
+						}
+						@include d($xs){
+							font-size: 12px;
+						}
+						@include d($xxs){
+							height: 120px;
+							font-size: 10px;
+						}
+				}
+				@include d($sm){
+					flex-wrap: wrap;
 				}
 		}
 		&-link{
@@ -46,9 +63,24 @@
 						color: var(--color-error);
 					}
 				}
+				@include d($xl){
+					font-size: 28px;
+				}
+				@include d($md){
+					font-size: 22px;
+				}
+				@include d($xs){
+					font-size: 18px;
+				}
+				@include d($xxs){
+					font-size: 14px;
+				}
 		}
 		&-logo{
 			width: 190px;
+				@include d($xl){
+					max-width: 80%;
+				}
 		}
 		&-copyright{
 			justify-content: space-between;
@@ -60,9 +92,20 @@
 				.paragraph{
 					color: inherit;
 				}
+				@include d($md){
+					padding: 0 15px;
+				}
 		}
 		[class*=h-]{
 			color: inherit;
 			font-family: var(--font-base-regular);
+		}
+		.link-default{
+			@include d($xs){
+				font-size: 12px;
+			}
+			@include d($xxs){
+				font-size: 10px;
+			}
 		}
 }

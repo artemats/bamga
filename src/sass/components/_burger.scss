@@ -1,0 +1,55 @@
+.burger{
+	display: flex;
+	align-items: center;
+	color: var(--color-black);
+		&-title{
+			@extend .link;
+		}
+		&-box{
+			position: relative;
+			width: 26px;
+			height: 16px;
+				&-arrow{
+					width: 100%;
+					height: 2px;
+					background-color: currentColor;
+					position: absolute;
+					right: 0;
+					transition: all var(--hover-duration) var(--hover-ease);
+						&:nth-child(1){
+							top: 0;
+						}
+						&:nth-child(2){
+							top: 7px;
+							width: 90%;
+						}
+						&:nth-child(3){
+							bottom: 0;
+							width: 80%;
+						}
+				}
+		}
+		&.is-active{
+			.burger{
+				&-box{
+					&-arrow{
+						&:nth-child(1){
+							transform: rotate(-45deg);
+							top: 7px;
+						}
+						&:nth-child(2){
+							width: 0;
+						}
+						&:nth-child(3){
+							width: 100%;
+							transform: rotate(45deg);
+							bottom: 7px;
+						}
+					}
+				}
+			}
+		}
+		@include m($md + 1){
+			display: none;
+		}
+}

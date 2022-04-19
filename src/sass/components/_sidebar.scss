@@ -1,0 +1,25 @@
+.sidebar{
+		&-title{
+			font-size: 26px;
+			color: var(--color-black);
+			font-family: var(--font-title-bold);
+			margin-bottom: 20px;
+				&-md{
+					font-size: 20px;
+				}
+		}
+		&-box{
+			margin-bottom: 66px;
+		}
+		&-date{
+			font-size: 20px;
+			font-family: var(--font-title-bold);
+			color: var(--color-primary);
+		}
+		&-banner{
+			margin-top: 30px;
+		}
+		.hr{
+			margin-bottom: 30px;
+		}
+}

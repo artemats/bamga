@@ -6,6 +6,9 @@
 		.section{
 				&-name{
 					top: 34px;
+						@include d($xs){
+							top: 20px;
+						}
 				}
 				&-thumb{
 					height: 528px;
@@ -17,6 +20,16 @@
 						img{
 							@include imageCover(center);
 						}
+						@include d($xl){
+							margin-left: 0;
+						}
+						@include d($md){
+							margin: 40px -40px 0;
+						}
+						@include d($sm){
+							height: 80vw;
+							margin: 40px -15px 0;
+						}
 				}
 				&-title{
 					margin-bottom: 33px;
@@ -27,6 +40,18 @@
 				&-content{
 					padding-top: 117px;
 					max-width: 530px;
+						@include d($md){
+							max-width: 80%;
+							padding-left: 60px;
+						}
+						@include d($sm){
+							padding-left: 40px;
+						}
+						@include d($xs){
+							padding-top: 60px;
+							padding-left: 0;
+							max-width: 100%;
+						}
 				}
 				&-bg{
 					img{
@@ -38,5 +63,10 @@
 		.row,
 		[class*=col-]{
 			height: 100%;
+		}
+		@include d($md){
+			height: auto;
+			min-height: 0;
+			margin-top: 0;
 		}
 }

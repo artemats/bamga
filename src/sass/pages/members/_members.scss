@@ -1,0 +1,44 @@
+.members{
+		&-open{
+			padding-bottom: 220px;
+			overflow: hidden;
+			margin-top: -33px;
+				&-description{
+					margin-bottom: 52px;
+					margin-top: 50px;
+					max-width: 590px;
+						p:not(:last-child){
+							margin-bottom: 15px;
+						}
+						@include d($md){
+							max-width: 100%;
+						}
+				}
+				.contact{
+					&-body{
+						&-item{
+							&:not(:last-child){
+								padding-bottom: 23px;
+							}
+						}
+						@include d($md){
+							padding-left: 0;
+						}
+					}
+				}
+				.tabs{
+						&-content{
+							padding-top: 93px;
+								@include d($md){
+									padding-top: 50px;
+								}
+						}
+				}
+				.section{
+						&-banner{
+							height: auto;
+							margin-top: 0;
+						}
+				}
+		}
+}

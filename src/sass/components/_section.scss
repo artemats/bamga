@@ -37,10 +37,19 @@
 						&:not(:last-child){
 							margin-right: 74px;
 						}
+						@include d($md){
+							font-size: 190px;
+						}
+						@include d($sm){
+							font-size: 160px;
+						}
+						@include d($xs){
+							font-size: 130px;
+						}
 				}
 		}
 		&-title{
-		
+			text-transform: capitalize;
 		}
 		&-label{
 			font-size: 16px;
@@ -49,5 +58,25 @@
 			font-family: var(--font-base-semibold);
 			color: var(--color-primary-light);
 			text-transform: uppercase;
+				@include d($xxs){
+					font-size: 12px;
+				}
+		}
+		&-banner{
+			height: 544px;
+			margin-top: 62px;
+				img{
+					@include imageCover(center);
+				}
+				@include d($lg){
+					height: 450px;
+				}
+				@include d($sm){
+					height: 60vw;
+				}
+				@include d($xs){
+					margin-top: 30px;
+					height: 70vw;
+				}
 		}
 }

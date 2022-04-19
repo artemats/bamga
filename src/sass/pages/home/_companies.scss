@@ -9,6 +9,15 @@
 				&-panel{
 					position: relative;
 				}
+				@include d($xxs){
+					padding: 28px 0 25px;
+				}
+		}
+		@include d($md){
+			padding-bottom: 50px;
+		}
+		@include d($xxs){
+			padding-bottom: 20px;
 		}
 }
 
@@ -16,6 +25,16 @@
 		&-title{
 			max-width: 80%;
 			overflow: hidden;
+				@include d($sm){
+					max-width: 70%;
+				}
+				@include d($xs){
+					max-width: 100%;
+					padding-right: 130px;
+				}
+				@include d($xxs){
+					padding-right: 95px;
+				}
 		}
 		&-thumb{
 			position: absolute;
@@ -26,6 +45,15 @@
 			height: 100px;
 				img{
 					@include imageContain(center);
+				}
+				@include d($lg){
+					height: 80px;
+				}
+				@include d($xs){
+					width: 120px;
+				}
+				@include d($xxs){
+					width: 90px;
 				}
 		}
 }

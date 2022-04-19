@@ -1,0 +1,29 @@
+.article-box{
+	.news{
+		&-box{
+			&-title{
+				font-size: 24px;
+				font-family: var(--font-title-bold);
+				color: var(--color-black);
+				margin: 22px 0 0;
+				padding-right: 60px;
+				position: relative;
+					p{
+						color: inherit;
+					}
+					.btn-dot{
+						position: absolute;
+						top: -3px;
+						right: 0;
+					}
+					@include d($lg){
+						font-size: 22px;
+					}
+					@include d($md){
+						font-size: 20px;
+						padding-right: 50px;
+					}
+			}
+		}
+	}
+}

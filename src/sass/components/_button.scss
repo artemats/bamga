@@ -86,5 +86,19 @@
 						transform: rotate(45deg);
 					}
 				}
+				@include d($md){
+					width: 46px;
+					height: 46px;
+					min-width: 46px;
+				}
+		}
+		&-prev{
+			.btn{
+					&-icon{
+						margin-left: 0;
+						margin-right: 28px;
+						transform: scaleX(-1);
+					}
+			}
 		}
 }

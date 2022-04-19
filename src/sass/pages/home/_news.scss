@@ -11,11 +11,21 @@
 						img{
 							@include imageCover(center);
 						}
+						@include d($xl){
+							height: 42vw;
+						}
+						@include d($sm){
+							height: 65vw;
+						}
+						@include d($xs){
+							height: 80vw;
+						}
 				}
 				&-tags{
 					display: flex;
 					align-items: center;
 					flex-wrap: wrap;
+					min-height: 22px;
 				}
 				&-title{
 					color: var(--color-black);
@@ -23,7 +33,7 @@
 				}
 				&-description{
 					position: relative;
-					padding-right: 100px;
+					padding-right: 70px;
 					margin-top: 20px;
 						.btn{
 								&-dot{
@@ -32,17 +42,38 @@
 									right: 0;
 								}
 						}
+						@include d($md){
+							padding-right: 52px;
+						}
+				}
+				@include d($sm){
+					margin-top: 80px;
 				}
 		}
 		.section{
 				&-name{
 					top: 62px;
+						@include d($md){
+							top: 30px;
+						}
 				}
 				&-title{
 					padding-left: 80px;
+						@include d($md){
+							padding-left: 60px;
+						}
+						@include d($sm){
+							padding-left: 40px;
+						}
+						@include d($xs){
+							padding-left: 0;
+						}
 				}
 				&-bg{
 					text-align: right;
 				}
+		}
+		@include d($md){
+			padding: 60px 0;
 		}
 }

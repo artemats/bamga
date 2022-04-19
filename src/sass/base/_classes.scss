@@ -28,9 +28,22 @@
     &-md{
       font-size: 16px;
       line-height: 1.625em;
+        @include d($xxs){
+          font-size: 14px;
+        }
     }
     &-lg{
       font-size: 18px;
+      line-height: 1.6em;
+    }
+    &-title{
+      font-size: 24px;
+      line-height: 1.6em;
+      color: var(--color-black);
+      font-family: var(--font-base-mediumn);
+        @include d($xl){
+          font-size: 20px;
+        }
     }
     &-medium{
       font-family: var(--font-base-mediumn);
@@ -51,6 +64,38 @@
 
 .color{
     &-red{
-      color: var(--color-error);
+      color: var(--color-error) !important;
     }
+    &-primary{
+      color: var(--color-primary) !important;
+        &-light{
+          color: var(--color-primary-light) !important;
+        }
+    }
+}
+
+.pl{
+  padding-left: 80px;
+    @include d($xl){
+      padding-left: 60px;
+    }
+    @include d($md){
+      padding-left: 0;
+    }
+}
+
+a.paragraph{
+    &-md{
+      color: var(--color-gray);
+      transition: color var(--hover-duration) var(--hover-ease);
+        @include hover($md){
+          &:hover{
+            color: var(--color-black);
+          }
+        }
+    }
+}
+
+.fullwidth{
+  width: 100%;
 }

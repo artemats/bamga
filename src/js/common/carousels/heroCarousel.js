@@ -1,4 +1,5 @@
 import Splide from '@splidejs/splide';
+import {showContentOnLoad} from "../general/showContentOnLoad";
 
 export const heroCarousel = () => {
 	const heroCarousel = document.querySelector('.hero-carousel');
@@ -17,10 +18,17 @@ export const heroCarousel = () => {
 			pauseOnHover: false,
 			easing: 'ease',
 			updateOnMove: true,
+			breakpoints: {
+				767: {
+					drag: 'free',
+					autoplay: false,
+				},
+			}
 		});
 
 		splide.on( 'mounted', function () {
 			getPreviousSlides();
+			showContentOnLoad();
 		});
 
 		splide.mount();
@@ -28,6 +36,8 @@ export const heroCarousel = () => {
 		splide.on( 'move', function (a) {
 			getPreviousSlides();
 		});
+	} else {
+		showContentOnLoad();
 	}
 };
 

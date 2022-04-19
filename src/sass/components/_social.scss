@@ -37,9 +37,23 @@
 					max-width: 39px;
 					max-height: 39px;
 					transition: opacity var(--hover-duration) var(--hover-ease);
+						@include d($xs){
+							width: 32px;
+							height: 32px;
+						}
+						@include d($xxs){
+							width: 26px;
+							height: 26px;
+						}
 				}
 				&:not(:last-child){
 					margin-right: 50px;
+						@include d($xl){
+							margin-right: 15px;
+						}
+						@include d($xxs){
+							margin-right: 5px;
+						}
 				}
 				@include hover($md){
 					&:hover{
@@ -88,6 +102,15 @@
 									}
 								}
 						}
+				}
+				@include d($xl){
+					padding-right: 15px;
+				}
+				@include d($md){
+					padding-right: 8px;
+				}
+				@include d($xs){
+					display: none;
 				}
 		}
 }

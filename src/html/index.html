@@ -34,39 +34,46 @@
 </head>
 <body>
 <main id="wrapper">
-	<header class="header">
+	<header class="header hideOnLoad hidden top">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-3 col-6">
 					<a href="index.html" class="header-logo">
 						<img src="../images/logo.png" alt="BAMgA"/>
 					</a>
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-9 col-6">
 					<div class="header-nav">
 						<nav class="nav">
 							<ul>
 								<li>
 									<a href="#">Über uns</a>
 									<ul>
-										<li><a href="#">Selbstdarstellung</a></li>
-										<li><a href="#">Koordinierungsgremium</a></li>
-										<li><a href="#">Mitglieder</a></li>
+										<li><a href="about.html">Selbstdarstellung</a></li>
+										<li><a href="team.html">Koordinierungsgremium</a></li>
+										<li><a href="members.html">Mitglieder</a></li>
 									</ul>
 								</li>
 								<li>
 									<a href="#">Aktuelles</a>
 									<ul>
-										<li><a href="#">Selbstdarstellung</a></li>
-										<li><a href="#">Koordinierungsgremium</a></li>
-										<li><a href="#">Mitglieder</a></li>
+										<li><a href="news.html">Nachrichten</a></li>
+										<li><a href="projects.html">Projekte</a></li>
+										<li><a href="events.html">Veranstaltungen</a></li>
 									</ul>
 								</li>
-								<li><a href="#">Projekte</a></li>
+								<li><a href="projects.html">Projekte</a></li>
 								<li><a href="#">Infos und Materialien</a></li>
-								<li><a href="#">Medien</a></li>
+								<li><a href="articles.html">Medien</a></li>
 							</ul>
 						</nav>
+						<div class="burger">
+							<div class="burger-box">
+								<div class="burger-box-arrow"></div>
+								<div class="burger-box-arrow"></div>
+								<div class="burger-box-arrow"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -78,11 +85,12 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
-					<div class="hero-title">
-						<h1 class="h-3"><span class="color-red">BAMgA</span> - Bundesallianz der Migrantenorganisationen gegen Antisemitismus und Menschenfeindlichkeit</h1>
-					</div>
-					<div class="hero-action">
+				<div class="col-lg-8">
+					<div class="hideOnLoad hidden bottom">
+						<div class="hero-title">
+							<h1 class="h-3"><span class="color-red">BAMgA</span> - Bundesallianz der Migrantenorganisationen gegen Antisemitismus und Menschenfeindlichkeit</h1>
+						</div>
+						<div class="hero-action">
 						<a href="about.html" class="btn">
 							<span class="btn-title">Mehr erfahren</span>
 							<span class="btn-icon">
@@ -92,17 +100,20 @@
 							</span>
 						</a>
 					</div>
+					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="hero-description">
+				<div class="col-lg-4">
+					<div class="hideOnLoad hidden bottom">
+						<div class="hero-description">
 						<p class="paragraph paragraph-semibold">Die BAMgA ist ein bundesweiter Verbund vielgestaltiger migrantischer Organisationen.</p>
 						<p class="paragraph">Vor dem Hintergrund der historischen Verantwortung Deutschlands in Bezug auf den Antisemitismus, wollen wir ein klares Statement in den eigenen Communities und der gesamten Gesellschaft dagegensetzen.</p>
 						<p class="paragraph">Wir erarbeiten Lösungsansätze zur Bekämpfung jeder Form von Rassismus und Diskriminierung und beziehen hierbei die betroffenen Migrantencommunities direkt mit ein.</p>
 					</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="hero-carousel splide">
+		<div class="hero-carousel splide hideOnLoad hidden bottom">
 			<div class="splide__track">
 				<div class="splide__list">
 					<div class="splide__slide hero-carousel-item">
@@ -161,7 +172,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="news-box">
-						<a href="#" class="news-box-thumb parallaxOnScroll">
+						<a href="new.html" class="news-box-thumb parallaxOnScroll">
 							<img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Nachrichten"/>
 						</a>
 						<div class="news-box-tags">
@@ -171,7 +182,7 @@
 						<hr class="hr"/>
 						<div class="news-box-description">
 							<p class="paragraph paragraph-md">Zentralrat fordert neue rechtliche Grundlagen im Kampf gegen BDS.</p>
-							<a href="#" class="btn btn-dot">
+							<a href="new.html" class="btn btn-dot">
 								<svg class="svg svg__20">
 									<use xlink:href="../images/sprite/sprite.svg#arrow-right-lg"></use>
 								</svg>
@@ -181,7 +192,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="news-box">
-						<a href="#" class="news-box-thumb parallaxOnScroll">
+						<a href="new.html" class="news-box-thumb parallaxOnScroll">
 							<img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Projekte"/>
 						</a>
 						<div class="news-box-tags">
@@ -191,7 +202,7 @@
 						<hr class="hr"/>
 						<div class="news-box-description">
 							<p class="paragraph paragraph-md">Zentralrat fordert neue rechtliche Grundlagen im Kampf gegen BDS.</p>
-							<a href="#" class="btn btn-dot">
+							<a href="new.html" class="btn btn-dot">
 								<svg class="svg svg__20">
 									<use xlink:href="../images/sprite/sprite.svg#arrow-right-lg"></use>
 								</svg>
@@ -201,7 +212,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="news-box">
-						<a href="#" class="news-box-thumb parallaxOnScroll">
+						<a href="new.html" class="news-box-thumb parallaxOnScroll">
 							<img src="https://images.unsplash.com/photo-1556484687-30636164638b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="Veranstaltungen"/>
 						</a>
 						<div class="news-box-tags">
@@ -211,7 +222,7 @@
 						<hr class="hr"/>
 						<div class="news-box-description">
 							<p class="paragraph paragraph-md">Zentralrat fordert neue rechtliche Grundlagen im Kampf gegen BDS.</p>
-							<a href="#" class="btn btn-dot">
+							<a href="new.html" class="btn btn-dot">
 								<svg class="svg svg__20">
 									<use xlink:href="../images/sprite/sprite.svg#arrow-right-lg"></use>
 								</svg>
@@ -222,7 +233,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="section members">
+	<section class="section members hideFixedSocial">
 		<div class="section-bg">
 			<img src="../images/bg/members.svg" alt="BAMgA"/>
 		</div>
@@ -235,12 +246,7 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5">
-					<div class="section-thumb scaleOnScroll parallaxOnScroll">
-						<img src="../images/photos/1-lg.jpg" alt="Mitglieder"/>
-					</div>
-				</div>
-				<div class="col-md-6 offset-md-1">
+				<div class="col-lg-6 offset-lg-1 order-lg-2">
 					<div class="section-content">
 						<div class="section-title">
 							<h3 class="h-2">Mitglieder</h3>
@@ -250,15 +256,20 @@
 							<p class="paragraph paragraph-md">Vor dem Hintergrund der historischen Verantwortung Deutschlands in Bezug auf den Antisemitismus, wollen wir ein klares Statement in den eigenen Communities und der gesamten Gesellschaft dagegensetzen.</p>
 						</div>
 						<div class="section-action">
-						<a href="about.html" class="btn">
-							<span class="btn-title">Mehr erfahren</span>
-							<span class="btn-icon">
+							<a href="members.html" class="btn">
+								<span class="btn-title">Mehr erfahren</span>
+								<span class="btn-icon">
 								<svg class="svg svg__14">
 									<use xlink:href="../images/sprite/sprite.svg#arrow-right"></use>
 								</svg>
 							</span>
-						</a>
+							</a>
+						</div>
 					</div>
+				</div>
+				<div class="col-lg-5 order-lg-1">
+					<div class="section-thumb scaleOnScroll parallaxOnScroll">
+						<img src="../images/photos/1-lg.jpg" alt="Mitglieder"/>
 					</div>
 				</div>
 			</div>
@@ -526,7 +537,7 @@
 					</div>
 				</div>
 				<div class="col-lg-5">
-					<div class="section-thumb">
+					<div class="section-thumb parallaxOnScroll">
 						<img src="../images/contact/contact-banner.jpg" alt="Impressum / Kontakt"/>
 					</div>
 				</div>
@@ -639,7 +650,7 @@
 			</div>
 		</div>
 	</section>
-	<footer class="footer">
+	<footer class="footer hideFixedSocial">
 		<div class="footer-panel">
 			<div class="footer-panel-item __20">
 				<a href="index.html" class="footer-logo">
@@ -651,20 +662,20 @@
 			</div>
 		</div>
 		<div class="footer-panel">
-			<div class="footer-panel-item">
+			<div class="footer-panel-item __20">
 				<a href="about.html" class="footer-link">Über uns</a>
 			</div>
-			<div class="footer-panel-item">
-				<a href="#" class="footer-link">Aktuelles</a>
+			<div class="footer-panel-item __20">
+				<a href="news.html" class="footer-link">Aktuelles</a>
 			</div>
-			<div class="footer-panel-item">
-				<a href="#" class="footer-link">Projekte</a>
+			<div class="footer-panel-item __20">
+				<a href="projects.html" class="footer-link">Projekte</a>
 			</div>
-			<div class="footer-panel-item">
+			<div class="footer-panel-item __20">
 				<a href="#" class="footer-link">Infos und Materialien</a>
 			</div>
-			<div class="footer-panel-item">
-				<a href="#" class="footer-link">Medien</a>
+			<div class="footer-panel-item __20">
+				<a href="articles.html" class="footer-link">Medien</a>
 			</div>
 		</div>
 		<div class="footer-panel">

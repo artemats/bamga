@@ -1,0 +1,67 @@
+.events{
+	padding-top: 28px;
+	padding-bottom: 90px;
+		&-box{
+				p:not(:last-child){
+					margin-bottom: 15px;
+				}
+				[class*=h-]{
+					margin: 34px 0;
+						& ~ p{
+							@include m($md + 1){
+								max-width: 530px;
+							}
+						}
+						@include d($sm){
+							margin: 10px 0;
+						}
+				}
+				@include d($md){
+					padding-top: 40px;
+				}
+		}
+		&-detail{
+			margin: 75px 0;
+				.paragraph{
+					max-width: 752px;
+					margin: 0 auto;
+						@include d($md){
+							color: var(--color-black);
+						}
+				}
+				@include d($md){
+					margin: 30px 0;
+					color: var(--color-black);
+					font-family: var(--font-base-mediumn);
+				}
+		}
+		.section{
+				&-banner{
+					margin-right: 32px;
+					margin-top: 0;
+					height: auto;
+						&:not(.fullwidth){
+							position: sticky;
+							top: 0;
+								@include d($md){
+									height: 65vw;
+								}
+								@include d($sm){
+									height: auto;
+								}
+						}
+						&.fullwidth{
+							margin-right: 0;
+						}
+						@include d($md){
+							margin-right: 0;
+						}
+				}
+		}
+		.group-buttons{
+			margin-top: 67px;
+		}
+		@include d($sm){
+			padding-top: 0;
+		}
+}

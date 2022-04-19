@@ -7,12 +7,26 @@
 	z-index: 3;
 		&-logo{
 			width: 162px;
+			position: relative;
+			z-index: 1;
 				img{
 					width: 100%;
 					height: auto;
 				}
+				@include d($xxs){
+					width: 140px;
+					margin-left: -10px;
+				}
 		}
 		&-nav{
 			padding-top: 19px;
+				@include d($lg){
+					display: flex;
+					justify-content: flex-end;
+					align-items: center;
+				}
+				@include d($xxs){
+					padding-top: 17px;
+				}
 		}
 }

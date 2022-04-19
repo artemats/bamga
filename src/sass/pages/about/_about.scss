@@ -1,0 +1,40 @@
+.about{
+		&-inner{
+			padding-top: 56px;
+				&-conclusion{
+					max-width: 672px;
+					margin: 0 auto;
+					text-align: center;
+					padding: 80px 0 147px;
+						@include d($md){
+							padding: 60px 0 100px;
+						}
+						@include d($xxs){
+							padding: 40px 0 80px;
+						}
+				}
+				.hr{
+					margin-top: 120px;
+					margin-bottom: 76px;
+						@include d($md){
+							margin-top: 50px;
+							margin-bottom: 50px;
+						}
+				}
+				.banner{
+					margin-top: 120px;
+						@include d($md){
+							margin-top: 50px;
+						}
+				}
+				.section-name{
+					top: 78px;
+						@include d($md){
+							top: 0;
+						}
+				}
+				@include d($sm){
+					padding-top: 0;
+				}
+		}
+}

@@ -7,17 +7,21 @@
   --color-primary-light:                  #9CBDF0;
   --color-gray:                           #70797A;
   --color-gray-100:                       #828282;
+  --color-gray-200:                       #656B74;
+  --color-gray-300:                       #E0E0E0;
   --font-base-regular:                    'Poppins-Regular';
   --font-base-mediumn:                    'Poppins-Medium';
   --font-base-semibold:                   'Poppins-SemiBold';
   --font-title-bold:                      'Jones-Bold';
   --hover-duration:                       .2s;
   --scale-duration:                       1s;
+  --show-duration:                        1.4s;
   --hover-ease:                           ease;
 }
 
-$lg:                                      1330;
-$xl:                                      1199;
+$xl:                                      1330;
+$lg:                                      1199;
 $md:                                      991;
 $sm:                                      767;
 $xs:                                      575;
+$xxs:                                     480;

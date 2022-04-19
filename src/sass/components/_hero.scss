@@ -4,43 +4,111 @@
 		&-title{
 			padding-left: 80px;
 			max-width: 790px;
+				@include d($xl){
+					padding-left: 60px;
+				}
+				@include d($sm){
+					padding-left: 40px;
+				}
+				@include d($xs){
+					padding-left: 0;
+				}
 		}
 		&-action{
 			padding-left: 80px;
 			margin-top: 46px;
+				@include d($xl){
+					padding-left: 60px;
+				}
+				@include d($sm){
+					padding-left: 40px;
+				}
+				@include d($xs){
+					padding-left: 0;
+				}
 		}
 		&-description{
 			padding-top: 9px;
 			max-width: 335px;
+				@include d($md){
+					padding-left: 60px;
+					max-width: 90%;
+					padding-top: 30px;
+				}
+				@include d($sm){
+					padding-left: 40px;
+				}
+				@include d($xs){
+					padding-left: 0;
+					max-width: 100%;
+				}
 		}
 		&-carousel{
 			margin: 127px auto 0;
-			&-item{
-				width: 270px;
-				height: 360px;
-				margin: 0 15px;
-				transition: all var(--scale-duration) var(--hover-ease);
-					img{
-						@include imageCover(center);
+				&-item{
+					width: 270px;
+					height: 360px;
+					margin: 0 15px;
+					transition: all var(--scale-duration) var(--hover-ease);
+						img{
+							@include imageCover(center);
+						}
+						@include m($sm + 1) {
+							&.is-active {
+								transform: scale(1);
+							}
+							&.is-prev,
+							&.is-next,
+							&.is-scaled {
+								width: 111px;
+								height: 148px;
+							}
+							&.is-next + .hero-carousel-item + .hero-carousel-item,
+							&.is-next + .hero-carousel-item + .hero-carousel-item + .hero-carousel-item + .hero-carousel-item {
+								width: 111px;
+								height: 148px;
+							}
+						}
+						@include d($sm){
+							margin: 0 10px;
+						}
+						@include d($xs){
+							width: 55vw;
+							height: 70vw;
+						}
+				}
+				.splide__list{
+					align-items: center;
+				}
+				@include d($xs){
+					margin: 85px auto 0;
+				}
+		}
+		/*
+		Types
+		 */
+		&-inner{
+			padding: 117px 0 40px;
+				.section{
+						&-description{
+							padding-top: 8px;
+							max-width: 420px;
+								@include d($md){
+									max-width: 100%;
+								}
+						}
+						&-name{
+							top: 236px;
+						}
+						&-label{
+							margin-bottom: 5px;
+						}
+				}
+				@include d($sm) {
+					& ~ .social-fixed{
+						display: none;
 					}
-					&.is-active{
-						transform: scale(1);
-					}
-					&.is-prev,
-					&.is-next,
-					&.is-scaled{
-						width: 111px;
-						height: 148px;
-					}
-					&.is-next + .hero-carousel-item + .hero-carousel-item,
-					&.is-next + .hero-carousel-item + .hero-carousel-item + .hero-carousel-item + .hero-carousel-item{
-						width: 111px;
-						height: 148px;
-					}
-			}
-			.splide__list{
-				align-items: center;
-			}
+				}
 		}
 		.section{
 			&-bg{
@@ -48,5 +116,14 @@
 					width: 100%;
 				}
 			}
+			&-name{
+				z-index: 0;
+			}
+		}
+		@include d($sm){
+			padding: 145px 0 60px;
+		}
+		@include d($xs){
+			padding: 135px 0 60px;
 		}
 }

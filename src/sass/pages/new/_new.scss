@@ -1,0 +1,28 @@
+.new{
+	&-open{
+		padding-top: 5px;
+		padding-bottom: 137px;
+			&-box{
+				margin-bottom: 120px;
+					strong{
+						@extend .paragraph-medium;
+					}
+					& > *:not(img){
+						max-width: 865px;
+						margin-bottom: 15px;
+					}
+					img{
+						margin: 95px 0 74px;
+							@include d($xs){
+								margin: 40px 0;
+							}
+					}
+					@include d($xs){
+						margin-bottom: 80px;
+					}
+			}
+			@include d($xs){
+				padding-bottom: 80px;
+			}
+	}
+}
