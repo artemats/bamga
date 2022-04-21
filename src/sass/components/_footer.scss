@@ -91,6 +91,7 @@
 				}
 				.paragraph{
 					color: inherit;
+					line-height: 1em;
 				}
 				@include d($md){
 					padding: 0 15px;
