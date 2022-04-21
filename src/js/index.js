@@ -12,6 +12,8 @@ import {articlesCarousel} from "./common/carousels/articlesCarousel";
 import {tabsCarousel} from "./common/carousels/tabsCarousel";
 import {initTooltip} from "./common/general/initTooltip";
 import {changeHeaderOnScroll} from "./common/general/changeHeaderOnScroll";
+import {showContentOnLoad} from "./common/general/showContentOnLoad";
+import {toggleNavDropdown} from "./common/general/toggleNavDropdown";
 
 /*
 Require svg icons to stripe
@@ -49,3 +51,8 @@ Scenes
  */
 homeScene();
 generalScene();
+
+document.addEventListener('DOMContentLoaded', function(event) {
+	showContentOnLoad();
+	toggleNavDropdown();
+});

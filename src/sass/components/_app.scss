@@ -90,15 +90,19 @@ body{
 }
 
 .hideOnLoad{
-	transition: opacity var(--show-duration) var(--hover-ease), transform var(--show-duration) var(--hover-ease);
+	@include m($md + 1) {
+		transition: opacity var(--show-duration) var(--hover-ease), transform var(--show-duration) var(--hover-ease);
+	}
 	&.hidden{
-		opacity: 0;
-			&.top{
-				transform: translateY(-50px);
-			}
-			&.bottom{
-				transform: translateY(50px);
-			}
+		@include m($md + 1){
+			opacity: 0;
+				&.top{
+					transform: translateY(-50px);
+				}
+				&.bottom{
+					transform: translateY(50px);
+				}
+		}
 	}
 }
 

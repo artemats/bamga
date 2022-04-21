@@ -54,7 +54,7 @@
 					&.dropdown{
 						& > a{
 							padding-right: 16px;
-							pointer-events: none;
+							//pointer-events: none;
 						}
 					}
 					@include m($md + 1){
@@ -111,7 +111,8 @@
 				border-color: currentColor transparent transparent transparent;
 			}
 	}
-	&:hover{
+	&:hover,
+	&.is-active{
 		& > ul{
 			display: block;
 		}
