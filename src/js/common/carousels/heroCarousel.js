@@ -22,6 +22,7 @@ export const heroCarousel = () => {
 				767: {
 					drag: 'free',
 					autoplay: false,
+					type: 'slide',
 				},
 			}
 		});
@@ -42,12 +43,14 @@ export const heroCarousel = () => {
 };
 
 const getPreviousSlides = () => {
-	const slides = [...document.querySelectorAll('.hero-carousel-item')];
-	for (let i = 0; i < slides.length; i++) {
-		slides[i].classList.remove('is-scaled');
+	if (window.innerWidth >= 768) {
+		const slides = [...document.querySelectorAll('.hero-carousel-item')];
+		for (let i = 0; i < slides.length; i++) {
+			slides[i].classList.remove('is-scaled');
+		}
+		const prevPrevSlide = document.querySelector('.is-visible.is-active').previousElementSibling.previousElementSibling.previousElementSibling;
+		const prevPrevPrevSlide = document.querySelector('.is-visible.is-active').previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling;
+		!!prevPrevSlide ? prevPrevSlide.classList.add('is-scaled') : null;
+		!!prevPrevPrevSlide ? prevPrevPrevSlide.classList.add('is-scaled') : null;
 	}
-	const prevPrevSlide = document.querySelector('.is-visible.is-active').previousElementSibling.previousElementSibling.previousElementSibling;
-	const prevPrevPrevSlide = document.querySelector('.is-visible.is-active').previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling;
-	!!prevPrevSlide ? prevPrevSlide.classList.add('is-scaled') : null;
-	!!prevPrevPrevSlide ? prevPrevPrevSlide.classList.add('is-scaled') : null;
 }
