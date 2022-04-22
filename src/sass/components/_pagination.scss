@@ -1,0 +1,46 @@
+.pagination{
+	margin: 80px 0 20px;
+		&-list{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+				&-arrow{
+					width: 40px;
+					height: 40px;
+					padding: 9px;
+					border: 1px var(--color-error) solid;
+					border-radius: 50%;
+						&.__prev{
+							margin-right: 20px;
+								.svg{
+									transform: scaleX(-1);
+								}
+						}
+						&.__next{
+							margin-left: 20px;
+						}
+						@include hover($md){
+							&:hover{
+								.svg{
+									color: var(--color-error);
+								}
+							}
+						}
+				}
+				&-links{
+					a{
+						font-size: 16px;
+						margin: 0 5px;
+						font-family: var(--font-base-mediumn);
+						transition: color var(--hover-duration) var(--hover-ease);
+							&[href]{
+								@include hover($md){
+									&:hover{
+										color: var(--color-error);
+									}
+								}
+							}
+					}
+				}
+		}
+}
