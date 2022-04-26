@@ -1,0 +1,43 @@
+.partner-inner{
+		&-box{
+			padding-top: 100px;
+			max-width: 500px;
+				p{
+					&:not(:last-child){
+						margin-bottom: 15px;
+					}
+				}
+				@include d($md){
+					padding-top: 30px;
+					max-width: 100%;
+				}
+		}
+		&-list{
+			padding: 100px 0;
+				.section{
+						&-title{
+							margin-bottom: 50px;
+								@include d($md){
+									margin-bottom: 30px;
+								}
+						}
+						&-name{
+							top: 0;
+						}
+				}
+				@include d($xs){
+					padding-top: 50px;
+				}
+		}
+		&-item{
+			height: 100px;
+			margin: 50px 0;
+				img{
+					@include imageContain(center);
+				}
+				@include d($xs){
+					margin: 25px 0;
+					height: 80px;
+				}
+		}
+}

@@ -88,6 +88,17 @@
 				.footer-panel-item{
 					border: none;
 					height: 78px;
+						&:not(.footer-panel-item.__20){
+							@include d($xs){
+								width: 100%;
+								flex: none;
+							}
+						}
+						&.__20{
+							@include d($xs){
+								width: 50%;
+							}
+						}
 				}
 				.paragraph{
 					color: inherit;
@@ -95,6 +106,9 @@
 				}
 				@include d($md){
 					padding: 0 15px;
+				}
+				@include d($xs){
+					flex-wrap: wrap;
 				}
 		}
 		[class*=h-]{

@@ -48,12 +48,12 @@
 				}
 				&:not(:last-child){
 					margin-right: 50px;
-						@include d($xl){
-							margin-right: 15px;
-						}
-						@include d($xxs){
-							margin-right: 5px;
-						}
+						//@include d($xl){
+						//	margin-right: 15px;
+						//}
+						//@include d($xxs){
+						//	margin-right: 5px;
+						//}
 				}
 				@include hover($md){
 					&:hover{
