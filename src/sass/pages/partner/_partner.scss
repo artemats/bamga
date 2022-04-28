@@ -1,14 +1,14 @@
 .partner-inner{
 		&-box{
 			padding-top: 100px;
-			max-width: 500px;
+			max-width: 550px;
 				p{
 					&:not(:last-child){
 						margin-bottom: 15px;
 					}
 				}
 				@include d($md){
-					padding-top: 30px;
+					padding-top: 0;
 					max-width: 100%;
 				}
 		}
