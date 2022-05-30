@@ -18,9 +18,11 @@ h1{
 		}
 		@include d($xs){
 			font-size: 38px;
+			font-size: 7vw;
 		}
 		@include d($xxs){
 			font-size: 32px;
+			font-size: 7vw;
 		}
 }
 
